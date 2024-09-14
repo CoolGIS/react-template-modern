@@ -4,7 +4,6 @@ module.exports = {
     'postcss-pxtorem': {
       propList: ['*']
     },
-    autoprefixer: {},
-    '@csstools/postcss-cascade-layers': {}
+    'postcss-preset-env': {}
   }
 }
