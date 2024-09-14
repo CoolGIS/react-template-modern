@@ -1,1 +1,3 @@
-import 'jotai-devtools/styles.css'
+if (import.meta.env.DEV) {
+  await import('jotai-devtools/styles.css')
+}
