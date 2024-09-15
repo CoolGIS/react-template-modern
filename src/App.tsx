@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { DevTools } from 'jotai-devtools'
 import { Counter } from '@/components/Counter.tsx'
@@ -6,7 +6,14 @@ import { Link, Outlet } from 'react-router-dom'
 import { Divider } from '@styled/jsx'
 import { styled } from '@styled/jsx'
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient({
+  queryCache: new QueryCache({
+    onError(error) {
+      // 全局错误处理
+      console.log('error', error.message)
+    }
+  })
+})
 
 function App() {
   return (
