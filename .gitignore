@@ -23,10 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+*.tsbuildinfo
+
 # Panda
 styled-system
 styled-system-studio
-
-# tsbuildinfo
-/tsconfig.node.tsbuildinfo
-/tsconfig.app.tsbuildinfo
