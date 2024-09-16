@@ -20,10 +20,10 @@ function App() {
         <styled.ul p="10px" m="10px" border="1px solid #ccc" rounded="md" bg="white">
           <Center gap="10px">
             <li>
-              <Link to={'/home'}>主页</Link>
+              <Link to="/home">主页</Link>
             </li>
             <li>
-              <Link to={'/about'}>关于</Link>
+              <Link to="/about">关于</Link>
             </li>
           </Center>
         </styled.ul>
