@@ -1,4 +1,4 @@
-import { QueryCache } from '@tanstack/react-query'
+import { QueryCache, QueryClient } from '@tanstack/react-query'
 
 const queryCache = new QueryCache({
   onSuccess() {
@@ -10,4 +10,8 @@ const queryCache = new QueryCache({
   }
 })
 
-export { queryCache }
+const queryClient = new QueryClient({
+  queryCache
+})
+
+export { queryClient }
