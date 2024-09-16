@@ -1,4 +1,10 @@
-import { defineConfig } from '@pandacss/dev'
+import { defineConfig, defineGlobalStyles } from '@pandacss/dev'
+
+const globalCss = defineGlobalStyles({
+  html: {
+    fontSize: 'calc(100vw / 120)'
+  }
+})
 
 export default defineConfig({
   // Whether to use css reset
@@ -20,5 +26,8 @@ export default defineConfig({
 
   jsxFramework: 'react',
 
-  importMap: '@styled'
+  importMap: '@styled',
+
+  // Global styles
+  globalCss
 })
