@@ -4,13 +4,18 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { analyzer } from 'vite-bundle-analyzer'
 
+const ReactCompilerConfig = {
+  target: '18'
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/',
   plugins: [
     react({
       babel: {
-        presets: ['jotai/babel/preset']
+        presets: ['jotai/babel/preset'],
+        plugins: [['babel-plugin-react-compiler', ReactCompilerConfig]]
       }
     }),
     analyzer({ analyzerMode: 'static' })

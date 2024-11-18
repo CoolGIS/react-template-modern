@@ -20,6 +20,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
+    /* 构建缓存 */
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
     "paths": {
       "@/*": ["./src/*"],
       "@styled/*": ["./styled-system/*"]
